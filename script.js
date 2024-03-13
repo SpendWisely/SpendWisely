@@ -1,8 +1,6 @@
 import { initializeApp } from "firebase/app";
-import {getAuth, signInWithEmailAndPassword} from "firebase/auth";
+import {getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword} from "firebase/auth";
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyDZyOnA8LezOJ9_eVUthKsjWSR9-YHUEBQ",
   authDomain: "spendwisely-dev.firebaseapp.com",
@@ -21,4 +19,5 @@ console.log(auth);
 
 const email = document.getElementById('email').value;
 const password = document.getElementById('password').value;
+
 
