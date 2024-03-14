@@ -13,7 +13,7 @@
     top: 0;
     left: 0;
     height: 100%;
-    width: 300px;
+    width: 20%;
     background-color: rgb(40, 40, 40);
 }
 
@@ -37,7 +37,21 @@
     color: aliceblue;
 }
 
-.sidebar a:hover {
+.menu a:hover {
     background-color: rgb(198, 198, 198);
     color: black;
+}
+
+.my-profile {
+    float: right;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    margin-top: 20px;
+}
+
+.box .name,
+.box .email,
+.box .btn {
+    padding: 15px;
 }
