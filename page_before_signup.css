@@ -26,3 +26,8 @@
     text-align: center;
     text-decoration: none;
 }
+
+.navbar a:hover {
+    background-color: rgb(198, 198, 198);
+    color: black;
+}
