@@ -11,13 +11,13 @@
 <body>
     <section>
         <div class="login-box">
-            <form action="">
-                    <h2>Login</h2>
+            <form id="login">
+                <h2>Login</h2>
                 <div class="input">
-                    <input type="email" placeholder="Enter your Email">
+                    <input type="email" placeholder="Enter your Email" name="loginemail" id="loginemail">
                 </div>
                 <div class="input">
-                    <input type="password" placeholder="Enter your Password">
+                    <input type="password" placeholder="Enter your Password" name="loginpassword" id="loginpassword">
                 </div>
                 <button type="submit">Login</button>
                 <div class="login">Dont have an account?
@@ -27,5 +27,8 @@
         </div>
     </section>
 </body>
+
+
+<script type="module" src="./logInScript.js"></script>
 
 </html>
