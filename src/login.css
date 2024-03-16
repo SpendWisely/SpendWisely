@@ -1,20 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
     box-sizing: border-box;
 }
 
-section{
+section {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-.login-box{
+.login-box {
     border: 2px solid black;
     width: 400px;
     height: 500px;
@@ -22,40 +22,42 @@ section{
     justify-content: center;
     align-items: center;
     border-radius: 20px;
-    background-color:rgb(53, 53, 53);
+    background-color: rgb(53, 53, 53);
 }
 
-h2{
+h2 {
     text-align: center;
 }
 
-.input{
+.input {
     width: 300px;
-    margin: 30px;   
+    margin: 30px;
 }
-button{
+
+button {
     width: 300px;
-    margin: 10px 0px 20px 30px;   
+    margin: 10px 0px 20px 30px;
     padding: 10px;
     border-radius: 10px;
     border: none;
 }
 
-.input input{
+.input input {
     width: 100%;
     padding: 10px;
     border-radius: 10px;
     border: none;
 }
 
-.login{
+.login {
     font-size: small;
     text-align: center;
 }
 
-.login a{
+.login a {
     text-decoration: none;
 }
-.login a:hover{
-    text-decoration: underline  ;
+
+.login a:hover {
+    text-decoration: underline;
 }

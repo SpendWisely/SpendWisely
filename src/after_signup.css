@@ -3,7 +3,7 @@
 * {
     margin: 0;
     font-family: "Poppins", sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
     font-size: 20px;
 }
@@ -16,6 +16,7 @@
 .navbar .logo {
     float: left;
     padding: 25px;
+    color: aliceblue;
 }
 
 .navbar a {
@@ -25,9 +26,39 @@
     display: block;
     text-align: center;
     text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: 0.75s;
 }
 
-.navbar a:hover {
-    background-color: rgb(198, 198, 198);
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 125px;
+    height: 85vh;
+}
+
+.option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 350px;
+    background-color: rgb(40, 40, 40);
+    color: white;
+    font-size: 24px;
+    border-radius: 20px;
+}
+
+.option:hover {
+    background-color: rgb(110, 110, 110);
+    transition: 0.25s;
     color: black;
+}
+
+.option a {
+    color: aliceblue;
+    text-decoration: none;
 }

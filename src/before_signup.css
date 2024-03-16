@@ -3,55 +3,35 @@
 * {
     margin: 0;
     font-family: "Poppins", sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
     font-size: 20px;
 }
 
-.sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 20%;
+.navbar {
     background-color: rgb(40, 40, 40);
+    overflow: hidden;
 }
 
-.sidebar .logo {
-    padding: 30px;
-    margin: 5px;
+.navbar .logo {
+    float: left;
+    padding: 25px;
     color: aliceblue;
+}
+
+.navbar a {
+    float: right;
+    padding: 25px;
+    color: aliceblue;
+    display: block;
     text-align: center;
-}
-
-.menu div {
-    padding: 15px;
-}
-
-.menu a {
-    padding: 10px;
-}
-
-.sidebar a {
     text-decoration: none;
-    color: aliceblue;
+    transition: 0.75s;
+    border-radius: 5px;
+    margin-right: 10px;
 }
 
-.menu a:hover {
+.navbar a:hover {
     background-color: rgb(198, 198, 198);
     color: black;
-}
-
-.my-profile {
-    float: right;
-    width: 80%;
-    height: 100%;
-    display: flex;
-    margin-top: 20px;
-}
-
-.box .name,
-.box .email,
-.box .btn {
-    padding: 15px;
 }
