@@ -1,7 +1,7 @@
 import { initializeApp } from "firebase/app";
 import {
   getAuth,
-  signInWithEmailAndPassword,
+  // signInWithEmailAndPassword,
   onAuthStateChanged,
   signOut,
 } from "firebase/auth";
@@ -23,41 +23,40 @@ console.log(auth);
 
 const LogOut = document.getElementById("logout");
 
-
 LogOut.addEventListener("click", (e) => {
   e.preventDefault();
   const logOutUser = logout();
   console.log(logOutUser);
 });
 
-async function logout(){
-  try{
-    if(auth.currentUser){
-      await signOut(auth)
-      console.log("User logged out")
+async function logout() {
+  try {
+    if (auth.currentUser) {
+      await signOut(auth);
+      console.log("User logged out");
+      localStorage.removeItem("currentUser");
+      window.location.href = "/index.html";
+    } else {
+      console.log("No signed in user");
     }
-    else{
-      console.log("No signed in user")
-    }
-  }
-  catch(error){
+  } catch (error) {
     console.error("Error logging out: ", error.message);
     throw error;
   }
 }
 
-function displayUser() {
-  const currUser = auth.currentUser;
-  const currentUser = document.getElementById("currentuser");
-  currentUser.textContent = currUser.email;
-}
+// function displayUser() {
+//   const currUser = auth.currentUser;
+//   const currentUser = document.getElementById("currentuser");
+//   currentUser.textContent = currUser.email;
+// }
 
-onAuthStateChanged(auth, (user) => {
-  if(user) {
-    displayUser()
-  }
-  else{
-    const currentUser = document.getElementById("currentuser");
-    currentUser.textContent = "Not signed in"
-  }
-})
+// onAuthStateChanged(auth, (user) => {
+//   if(user) {
+//     displayUser()
+//   }
+//   else{
+//     const currentUser = document.getElementById("currentuser");
+//     currentUser.textContent = "Not signed in"
+//   }
+// })
