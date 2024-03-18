@@ -1,14 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transaction page</title>
     <link rel="stylesheet" href="transaction.css">
 </head>
-<body>
 
-    <form action="">
+<body>
+    <div class="container">
+        <form action="#">
+            <div class="date">
+                <span>Enter date: </span>
+                <input type="date">
+            </div>
+
+            <div class="option">
+                <input type="radio" name="transaction" id="debit">Debit
+                <input type="radio" name="transaction" id="credit">Credit
+            </div>
+
+            <div class="amount">
+                <span>Amount: </span>
+                <input type="number">
+            </div>
+            <div class="category">Category: 
+                <select name="option" id="category">
+                    <option value="groceries">Income</option>
+                    <option value="travel">Travel</option>
+                    <option value="shopping">Shopping</option>
+                    <option value="food">Food</option>
+                    <option value="bills">Bills</option>
+                    <option value="healthcare">Entertainment</option>
+                </select>
+            </div>
+
+            <div class="btn">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <!-- <form action="#">
         <label for="date">Enter Date: </label>
         <input type="date" name="date" id="date">
         <br>
@@ -29,7 +62,8 @@
         </select>
         <br>
         <button type="submit">Submit</button>
-    </form>
-  
+    </form> -->
+
 </body>
+
 </html>

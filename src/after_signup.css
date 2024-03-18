@@ -36,24 +36,36 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 125px;
-    height: 85vh;
+    gap: 100px;
+    height: 60vh;
 }
 
 .option {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 250px;
-    height: 350px;
-    background-color: rgb(40, 40, 40);
+    width: 350px;
+    height: 300px;
+    background-color: rgb(53, 53, 53);
     color: white;
     font-size: 24px;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
+.option .icon{
+    margin-top: 30px;
+}
+
+.option .btn{
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+
 .option:hover {
-    background-color: rgb(110, 110, 110);
+    background-color: rgb(198, 198, 198);
     transition: 0.25s;
     color: black;
 }

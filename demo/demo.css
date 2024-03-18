@@ -1,0 +1,9 @@
+#clickable-box {
+    width: 200px;
+    height: 100px;
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    line-height: 100px;
+    cursor: pointer;
+}

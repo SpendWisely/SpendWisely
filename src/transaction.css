@@ -7,3 +7,27 @@
     font-style: normal;
     font-size: 20px;
 }
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(53, 53, 53);
+    color: aliceblue;
+}
+
+.container{
+    display: block;
+    border: 2px solid wheat;
+    width: 60%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.container div{
+    padding: 25px;
+}
