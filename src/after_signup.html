@@ -11,19 +11,25 @@
 <body>
     <nav class="navbar">
         <div class="logo">LOGO</div>
-        <a href="#">USER</a>
+        <div class="logout">
+            <button id="logout">Logout</button>
+        </div>
+        <!-- <div class="user">
+            <img src="./assets/myprofile.png" width="40px" , height="40px">
+        </div> -->
     </nav>
+
     <div>
         <h2>Current User:</h2>
         <h3 style="font-weight: 700;" id="content"></h3>
     </div>
     <div class="menu">
-        <div class="myprofile option" onclick="window.location.href='myprofile.html'">
+        <!-- <div class="myprofile option" onclick="window.location.href='myprofile.html'">
             <div class="icon">
                 <img src="./assets/myprofile.png" width="80px" , height="80px">
             </div>
             <div class="btn">My Profile</div>
-        </div>
+        </div> -->
         <div class="dashboard option" onclick="window.location.href='dashboard.html'">
             <div class="icon">
                 <img src="./assets/dashboard.png" width="80px" , height="80px">
@@ -37,9 +43,10 @@
             <div class="btn">Transaction</div>
         </div>
     </div>
-    <div class="logout">
+
+    <!-- <div class="logout">
         <button id="logout">Logout</button>
-    </div>
+    </div> -->
 
 </body>
 <script type="module" src="logout.js"></script>
