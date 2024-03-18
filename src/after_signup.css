@@ -74,3 +74,25 @@
     color: aliceblue;
     text-decoration: none;
 }
+
+.logout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logout{
+    font-size: 15px;
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: rgb(53, 53, 53);
+    color: aliceblue;
+    border: none;
+}
+#logout:hover{
+    font-size: 17px;
+    background-color: rgb(198, 198, 198);
+    color: black;
+    transition: 0.25s;
+}
