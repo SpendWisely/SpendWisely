@@ -1,23 +1,14 @@
-import { initializeApp } from "firebase/app";
+import { app, db } from "../firebase";
+import { doc, setDoc } from "firebase/firestore";
+
 import {
   getAuth,
   createUserWithEmailAndPassword,
   onAuthStateChanged,
+  updateProfile
 } from "firebase/auth";
 
-const firebaseConfig = {
-  apiKey: "AIzaSyDZyOnA8LezOJ9_eVUthKsjWSR9-YHUEBQ",
-  authDomain: "spendwisely-dev.firebaseapp.com",
-  projectId: "spendwisely-dev",
-  storageBucket: "spendwisely-dev.appspot.com",
-  messagingSenderId: "300716824308",
-  appId: "1:300716824308:web:90eea52e3949ab070670a1",
-  measurementId: "G-TQXCNT7R4C",
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const auth = getAuth();
+const auth = getAuth(app);
 console.log(auth);
 
 const SignUp = document.getElementById("signup");
@@ -45,30 +36,15 @@ async function register(email, password) {
       password
     );
     console.log("User created: ", userCredential.user);
-    localStorage.setItem(
-      "currentUser",
-      JSON.stringify(userCredential)
-    );
+    localStorage.setItem("currentUser", JSON.stringify(userCredential));
     window.location.href = "/src/after_signup.html";
+
+    await setDoc(doc(db, "Users", userCredential.user.uid), {
+      username: email,
+      budget: null
+    })
   } catch (error) {
     console.error("Error creating account: ", error.message);
     throw error;
   }
 }
-
-function displayUser() {
-  const currUser = auth.currentUser;
-  const currentUser = document.getElementById("currentuser");
-  currentUser.textContent = currUser.email;
-}
-
-// onAuthStateChanged(auth, (user) => {
-//   if(user != null) {
-//     displayUser()
-//   }
-//   else{
-//     // console.log(user)
-//     const currentUser = document.getElementById("currentuser");
-//     currentUser.textContent = "Not signed in"
-//   }
-// })
