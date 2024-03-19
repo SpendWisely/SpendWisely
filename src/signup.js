@@ -1,11 +1,9 @@
 import { app, db } from "../firebase";
-import { doc, setDoc } from "firebase/firestore";
+import { addDoc, collection, doc, setDoc } from "firebase/firestore";
 
 import {
   getAuth,
   createUserWithEmailAndPassword,
-  onAuthStateChanged,
-  updateProfile
 } from "firebase/auth";
 
 const auth = getAuth(app);
@@ -41,8 +39,19 @@ async function register(email, password) {
 
     await setDoc(doc(db, "Users", userCredential.user.uid), {
       username: email,
-      budget: null
+      budget: null,
+      balance: null,
     })
+
+    const collRef = collection(db, "Users", userCredential.user.uid, "Transaction");
+
+    await addDoc(collRef, {
+      date: null,
+      debit: null,
+      credit: null,
+      category: null,
+    })
+
   } catch (error) {
     console.error("Error creating account: ", error.message);
     throw error;
