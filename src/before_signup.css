@@ -11,27 +11,30 @@
 .navbar {
     background-color: rgb(40, 40, 40);
     overflow: hidden;
+    height: 100px;
 }
 
 .navbar .logo {
     float: left;
     padding: 25px;
     color: aliceblue;
+    width: 200px;
+    margin-left: 35px;
+    filter: invert(100%);
 }
 
 .navbar a {
     float: right;
-    padding: 25px;
+    padding: 36px;
     color: aliceblue;
     display: block;
     text-align: center;
     text-decoration: none;
-    transition: 0.75s;
-    border-radius: 5px;
-    margin-right: 10px;
 }
 
 .navbar a:hover {
     background-color: rgb(198, 198, 198);
     color: black;
+    text-decoration:underline;
+    transition: 0.5s;
 }

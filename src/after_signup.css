@@ -11,12 +11,16 @@
 .navbar {
     background-color: rgb(40, 40, 40);
     overflow: hidden;
+    height: 100px;
 }
 
 .navbar .logo {
     float: left;
     padding: 25px;
     color: aliceblue;
+    width: 200px;
+    margin-left: 35px;
+    filter: invert(100%);
 }
 
 .navbar .user {
@@ -60,7 +64,7 @@
 
 .option:hover {
     background-color: rgb(198, 198, 198);
-    transition: 0.25s;
+    transition: 0.2s;
     color: black;
 }
 
@@ -71,8 +75,7 @@
 
 .logout{
     float: right;
-    margin-top: 25px;
-    margin-right: 40px;
+    padding: 33px;
 }
 
 #logout {
@@ -87,7 +90,7 @@
 }
 
 #logout:hover {
-    font-size: 17px;
-    transition: 0.25s;
+    font-size: 16px;
+    transition: 0.2s;
 }
 
