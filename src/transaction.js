@@ -1,2 +1,70 @@
-import {app, db} from '../firebase'
-import { collection, setDoc, doc } from "firebase/firestore";
+import { db } from "../firebase";
+import {
+  collection,
+  setDoc,
+  doc,
+  addDoc,
+  Timestamp,
+  getDoc,
+} from "firebase/firestore";
+
+const Txn = document.getElementById("addTransaction");
+let submitTxn = document.getElementById("submitTxn");
+
+Txn.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  submitTxn.textContent = "Processing...";
+
+  const dateInput = document.getElementById("date");
+  const radio = document.getElementsByName("transaction");
+  const amountInput = document.getElementById("amount");
+  const category = document.getElementById("category");
+
+  let txnType = null; //false for debit; true for credit;
+  let debit = radio[0].checked ? (txnType = false) : null;
+  let credit = radio[1].checked ? (txnType = true) : null;
+
+  const date = Timestamp.fromDate(new Date(dateInput.value));
+  const amount = parseFloat(amountInput.value);
+
+  const userCredential = JSON.parse(localStorage.getItem("currentUser"));
+  const docRef = doc(db, "Users", userCredential.user.uid);
+  const docSnap = await getDoc(docRef);
+  const balance = docSnap.data().balance;
+
+  console.log(date, debit, credit, txnType, amount, category.value);
+
+  if (insufficientFunds(txnType, amount, balance)) {
+    const collRef = collection(
+      db,
+      "Users",
+      userCredential.user.uid,
+      "Transaction"
+    );
+
+    await addDoc(collRef, {
+      date: date,
+      txnType: txnType,
+      amount: amount,
+      category: category.value,
+    });
+
+    await setDoc(docRef, {
+      ...docSnap.data(),
+      balance: txnType ? balance + amount : balance - amount,
+    });
+
+    window.alert("Transaction Added");
+  }
+
+  submitTxn.textContent = "Submit";
+  Txn.reset();
+});
+
+function insufficientFunds(txnType, amount, balance) {
+  if (!txnType && balance < amount) {
+    window.alert("Insufficient Funds");
+    return false;
+  }
+  return true;
+}
