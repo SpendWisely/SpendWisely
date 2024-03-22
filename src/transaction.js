@@ -21,8 +21,8 @@ Txn.addEventListener("submit", async (e) => {
   const category = document.getElementById("category");
 
   let txnType = null; //false for debit; true for credit;
-  let debit = radio[0].checked ? (txnType = false) : null;
-  let credit = radio[1].checked ? (txnType = true) : null;
+  radio[0].checked ? (txnType = false) : null;
+  radio[1].checked ? (txnType = true) : null;
 
   const date = Timestamp.fromDate(new Date(dateInput.value));
   const amount = parseFloat(amountInput.value);
@@ -32,7 +32,7 @@ Txn.addEventListener("submit", async (e) => {
   const docSnap = await getDoc(docRef);
   const balance = docSnap.data().balance;
 
-  console.log(date, debit, credit, txnType, amount, category.value);
+  console.log(date, txnType, amount, category.value);
 
   if (insufficientFunds(txnType, amount, balance)) {
     const collRef = collection(
@@ -49,6 +49,7 @@ Txn.addEventListener("submit", async (e) => {
       category: category.value,
     });
 
+    //balance updation
     await setDoc(docRef, {
       ...docSnap.data(),
       balance: txnType ? balance + amount : balance - amount,
