@@ -8,20 +8,39 @@
     font-size: 20px;
 }
 
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body {
     height: 100vh;
     background-color: rgb(53, 53, 53);
     color: aliceblue;
 }
 
-.menu{
-    border: 2px solid wheat;
-    border-radius: 10px;
+img{
+    border: 2px solid black;
+}
+.menu {
+    display: flex;
 }
 
-.menu .option{
+.pie, .expense{
     text-align: center;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    text-decoration: underline;
+}
+
+.menu .division {
+    width: 50%;
+    margin: 10px;
+    height: 85vh;
+}
+
+.display {
+    /* border-right: 1px solid black; */
+    border-right: 1px solid ghostwhite;
+}
+
+.balance {
+    text-align: center;
+    margin-top: 25px;
 }

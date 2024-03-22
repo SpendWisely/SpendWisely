@@ -1,23 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="dashboard.css">
 </head>
+
 <body>
     <div class="menu">
-        <div class="pie option">Category wise Pie Chart</div>
-        <div class="expense option">Category wise expense table</div>
-        <div class="generate-report option">
-            <button>Generate Report</button>
+        <div class="display division">
+            <div class="pie">Category wise Pie Chart</div>
+            <img src="dashboard.png" width="500px">
         </div>
-        <div>Balance : <span id="balance"></span></div>
-        <div class="budget option">! ! !</div>
-        <div id="txnDetails"></div>
+        <div class="table division">
+            <div class="expense">Category wise expense table</div>
+            <div id="txnDetails"></div>
+        </div>
+
+        <!-- <div class="btn">
+            <div class="generate-report">
+                <button>Generate Report</button>
+            </div>
+        </div> -->
+
+    </div>
+    <div class="balance">Balance:
+        <span id="balance">$$</span>
     </div>
 </body>
 
 <script type="module" src="dashboard.js"></script>
+
 </html>
