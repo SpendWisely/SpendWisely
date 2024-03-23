@@ -19,6 +19,9 @@ img{
 }
 .menu {
     display: flex;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
 }
 
 .pie, .expense{
@@ -29,10 +32,28 @@ img{
     margin-bottom: 20px;
 }
 
-.menu .division {
+.division {
     width: 50%;
     margin: 10px;
-    height: 85vh;
+    height: 100%;
+    position: relative;
+}
+
+.table::-webkit-scrollbar{
+    width: 4px;;
+}
+
+.table::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color of the track */
+}
+
+.table::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the thumb */
+    border-radius: 10px;
+}
+
+.table::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the thumb on hover */
 }
 
 .display {
@@ -43,11 +64,15 @@ img{
     text-align: center;
     margin-top: 25px;
 }
+
 .table th {
+    position: sticky;
+    top: 0px;
     border-right: 1px solid ghostwhite;
     border-bottom: 1px solid ghostwhite;
     width: 200px;
     padding: 25px 0px 25px 0px;
+    background-color:#353535
 }
 
 td{
@@ -56,7 +81,10 @@ td{
     text-align: center;
 }
 
-table, th, td {
+.table {
     border: 1px solid ghostwhite;
     border-collapse: collapse;
+    height: 75%;
+    overflow-y: scroll;
+    position: relative;
   }
