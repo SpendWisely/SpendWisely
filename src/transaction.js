@@ -34,7 +34,7 @@ Txn.addEventListener("submit", async (e) => {
 
   console.log(date, txnType, amount, category.value);
 
-  if (insufficientFunds(txnType, amount, balance)) {
+  if (checkDebitIncome(txnType, category.value) && insufficientFunds(txnType, amount, balance)) {
     const collRef = collection(
       db,
       "Users",
@@ -61,6 +61,15 @@ Txn.addEventListener("submit", async (e) => {
   submitTxn.textContent = "Submit";
   Txn.reset();
 });
+
+function checkDebitIncome(txnType, category){
+  console.log(txnType, category)
+  if(txnType == false && category == "income"){
+    window.alert("Cannot debit income");
+    return false;
+  }
+  return true;
+}
 
 function insufficientFunds(txnType, amount, balance) {
   if (!txnType && balance < amount) {
