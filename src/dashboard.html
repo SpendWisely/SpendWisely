@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+    <div class="menu">
+        <div class="display division">
+            <div class="pie">Category wise Pie Chart</div>
+            <!-- <img src="dashboard.png" width="100px"> -->
+            <div class="balance">Balance:
+                <span id="balance">$$</span>
+            </div>
+            <div class="outerChart">
+                <div class="chart">
+                    <canvas id="txnChart" class="txnChart"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="division">
+            <div class="expense">
+                Category wise expense table
+            </div>
+            <div>
+                <label for="fromDate">From: </label>
+                <input type="date" id="fromDate">
+                <label for="fromDate">to: </label>
+                <input type="date" id="toDate">
+            </div>
+            <div class="table">
+                <table>
+                    <thead>
+                        <th>Date</th>
+                        <th>Transaction</th>
+                        <th>Amount</th>
+                        <th>Category</th>
+                    </thead>
+                    <tbody id="txnDetails"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script type="module" src="dashboard.js"></script>
+
+</html>

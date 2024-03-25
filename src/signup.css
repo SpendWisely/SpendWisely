@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(100, 100, 100);
+}
+
+.signup-box {
+    width: 400px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: rgb(52, 52, 52);
+}
+
+h2 {
+    text-align: center;
+    color: aliceblue;
+}
+
+.input {
+    width: 300px;
+    margin: 30px;
+}
+
+button {
+    width: 300px;
+    margin: 10px 0px 20px 30px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+button:hover {
+    font-size: 15px;
+    transition: 0.25s;
+}
+
+.input input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+.login {
+    font-size: small;
+    text-align: center;
+    color: aliceblue;
+}
+
+.login a {
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: bolder;
+}
+
+.login a:hover {
+    text-decoration: underline;
+}
