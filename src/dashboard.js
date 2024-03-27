@@ -49,6 +49,7 @@ txnSnap.forEach((doc) => {
 });
 
 //Sorting Array by date
+console.log(txnArray);
 txnArray.sort((a, b) => {
   return new Date(b.date) - new Date(a.date);
 });
@@ -73,6 +74,7 @@ fromDateInput.addEventListener("change", () => {
   let fromDate, toDate;
   fromDate = new Date(fromDateInput.value);
   toDate = new Date(toDateInput.value);
+  console.log(toDate)
   if (toDate == 'Invalid Date') {
     toDate = new Date(txnArray[0].date);
   }

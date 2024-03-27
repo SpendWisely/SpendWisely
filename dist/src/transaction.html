@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction page</title>
+  <script type="module" crossorigin src="/assets/transaction-CNjBITh2.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/index.esm-DNswNO0L.js">
+  <link rel="modulepreload" crossorigin href="/assets/firebase-BeQmH5kf.js">
+  <link rel="stylesheet" crossorigin href="/assets/transaction-8R_j_vFS.css">
+</head>
+
+<body>
+    <div class="container">
+        <form action="#" id="addTransaction">
+            <div class="date">
+                <span>Enter date: </span>
+                <input type="date" id="date" required>
+            </div>
+
+            <div class="option">
+                <input type="radio" name="transaction" id="debit" value="debit" required>Debit
+                <input type="radio" name="transaction" id="credit" value="credit">Credit
+            </div>
+
+            <div class="amount">
+                <span>Amount: </span>
+                <input type="number" max="1000000000000" min="0" id="amount" required>
+            </div>
+            <div class="category">Category: 
+                <select name="option" id="category" required>
+                    <option value="income">Income</option>
+                    <option value="travel">Travel</option>
+                    <option value="shopping">Shopping</option>
+                    <option value="food">Food</option>
+                    <option value="bills">Bills</option>
+                    <option value="entertainment">Entertainment</option>
+                    <option value="healthcare">Healthcare</option>
+                </select>
+            </div>
+
+            <div class="btn">
+                <button type="submit" id="submitTxn">Submit</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+
+</html>
