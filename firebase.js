@@ -2,13 +2,13 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDZyOnA8LezOJ9_eVUthKsjWSR9-YHUEBQ",
-  authDomain: "spendwisely-dev.firebaseapp.com",
-  projectId: "spendwisely-dev",
-  storageBucket: "spendwisely-dev.appspot.com",
-  messagingSenderId: "300716824308",
-  appId: "1:300716824308:web:90eea52e3949ab070670a1",
-  measurementId: "G-TQXCNT7R4C",
+  apiKey: "AIzaSyCYvycNP_N_YuMlaHTvDiWdMqBMU7C-P8I",
+  authDomain: "spendwisely-prod.firebaseapp.com",
+  projectId: "spendwisely-prod",
+  storageBucket: "spendwisely-prod.appspot.com",
+  messagingSenderId: "492077134311",
+  appId: "1:492077134311:web:ed6355f3a9a68f18714d42",
+  measurementId: "G-4JYY17JWSK"
 };
 
 const app = initializeApp(firebaseConfig);
