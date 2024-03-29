@@ -106,6 +106,10 @@ a{
     transition: 0.25s;
 }
 
+input, label{
+    cursor: pointer;
+}
+
 .form {
     padding-top: 40px;
     width: 85%;
