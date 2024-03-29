@@ -6,33 +6,55 @@
     font-family: "Poppins", sans-serif;
     box-sizing: border-box;
 }
+:root {
+    --background: rgba(24, 23, 40, 255);
+    --box: rgba(32, 29, 50, 255);
+    --font: rgba(245, 245, 250, 255);
+    --border: rgba(132,130,145,255);
+    --boxborder: rgba(138,136,243,255);
+    --placeholder: rgba(131,129,143,255);
+}
 
 section {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: rgb(100, 100, 100);
+    background-color: var(--background);
 }
 
 .signup-box {
     width: 400px;
-    height: 500px;
+    height: 530px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 20px;
-    background-color: rgb(52, 52, 52);
+    background-color: var(--box);
 }
 
 h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
     text-align: center;
-    color: aliceblue;
+    color: var(--font);
 }
 
 .input {
     width: 300px;
     margin: 30px;
+    border-bottom: 2px solid var(--border);
+}
+
+input {
+    border: none;
+    outline: none;
+    background: none;
+    color: var(--font);
+}
+
+input::placeholder {
+    color: var(--placeholder);
 }
 
 button {
@@ -41,13 +63,18 @@ button {
     padding: 10px;
     border-radius: 10px;
     border: none;
+    outline: none;
+    background: none;
+    border: 3px solid var(--boxborder);
+    color: var(--font);
+    font-size: 15px;
 }
 
 button:hover {
-    font-size: 15px;
+    background-color: var(--boxborder);
+    color: var(--font);
     transition: 0.25s;
 }
-
 .input input {
     width: 100%;
     padding: 10px;
@@ -56,17 +83,19 @@ button:hover {
 }
 
 .login {
-    font-size: small;
+    font-size: 13px;
     text-align: center;
-    color: aliceblue;
+    color: var(--font);
 }
 
 .login a {
+    font-size: 14px;
     text-decoration: none;
-    color: aliceblue;
-    font-weight: bolder;
+    color: var(--font);
 }
 
 .login a:hover {
     text-decoration: underline;
+    color: var(--boxborder);
+    transition: 0.1s;
 }

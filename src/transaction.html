@@ -10,22 +10,33 @@
 
 <body>
     <div class="container">
+        <h2>Enter Transaction Details</h2>
         <form action="#" id="addTransaction">
             <div class="date">
-                <span>Enter date: </span>
+                <span>
+                    Enter date:
+                </span>
                 <input type="date" id="date" required>
             </div>
 
             <div class="option">
+                <span>
+                    Transaction:
+                </span>
                 <input type="radio" name="transaction" id="debit" value="debit" required>Debit
                 <input type="radio" name="transaction" id="credit" value="credit">Credit
             </div>
 
             <div class="amount">
-                <span>Amount: </span>
+                <span>
+                    Amount:
+                </span>
                 <input type="number" max="1000000000000" min="0" id="amount" required>
             </div>
-            <div class="category">Category: 
+            <div class="category">
+                <span>
+                    Category:
+                </span> 
                 <select name="option" id="category" required>
                     <option value="income">Income</option>
                     <option value="travel">Travel</option>
@@ -40,7 +51,21 @@
             <div class="btn">
                 <button type="submit" id="submitTxn">Submit</button>
             </div>
+
         </form>
+            <div class="gotodashboard">
+                    <a href="dashboard.html">
+                        
+                        <button>
+                            Go to dashboard
+                        </button>
+                    </a>
+            </div>
+            <!-- <div class="gotodashboard">
+                <button>
+                    <a href="dashboard.html">Go to Dashboard</a>
+                </button>
+            </div> -->
     </div>
 
 </body>

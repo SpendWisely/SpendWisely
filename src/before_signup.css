@@ -3,13 +3,23 @@
 * {
     margin: 0;
     font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-style: normal;
     font-size: 20px;
 }
-
+:root {
+    --background: rgba(24, 23, 40, 255);
+    --box: rgba(32, 29, 50, 255);
+    --font: rgba(245, 245, 250, 255);
+    --border: rgba(132,130,145,255);
+    --boxborder: rgba(138,136,243,255);
+    --placeholder: rgba(131,129,143,255);
+}
+body{
+    /* background-color: var(--box); */
+    background-color: var(--background);
+}
 .navbar {
-    background-color: rgb(40, 40, 40);
+    /* background-color: var(--box); */
+    background-color: var(--background);
     overflow: hidden;
     height: 100px;
 }
@@ -17,24 +27,44 @@
 .navbar .logo {
     float: left;
     padding: 25px;
-    color: aliceblue;
-    width: 200px;
     margin-left: 35px;
     filter: invert(100%);
 }
 
 .navbar a {
     float: right;
-    padding: 36px;
-    color: aliceblue;
-    display: block;
-    text-align: center;
+    color: var(--font);
     text-decoration: none;
+    margin-right: 10px;
+    margin-top: 27px;
+    margin-right: 40px;
+    padding: 10px 15px 10px 15px;
+    border: 3px solid var(--boxborder);
+    border-radius: 10px;
+    font-size: 15px;
 }
 
 .navbar a:hover {
-    background-color: rgb(198, 198, 198);
-    color: black;
-    text-decoration:underline;
-    transition: 0.5s;
+    background-color: var(--boxborder);
+    text-decoration: underline;
+    transition: 0.2s;
+}
+
+.matter{
+    color: var(--font);
+    width: 60%;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 30px;
+    text-align: center;
+    padding: 50px;
+}
+
+.matter #name{
+    font-size: 80px;
+    color: var(--boxborder);
+    font-weight: 700;
+}
+.matter #info{
+    color: var(--font);
 }
