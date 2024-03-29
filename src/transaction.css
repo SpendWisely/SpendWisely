@@ -30,25 +30,25 @@ h2{
     background: var(--box);
     flex-direction: column;
     border: 2px solid var(--boxborder);
-    width: 30%;
     height: 75%;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 20px;
+    padding: 30px;
 }
 
 .container div{
     padding: 15px;
 }
 
-#addTransaction{
-    /* border: 2px solid red; */
+/* #addTransaction{
+    border: 2px solid red;
     padding: 40px 0px 10px 10px;
     display: flex;
     flex-direction: column;
 
-}
+} */
 
 #date, #amount{
     outline: none;
@@ -56,6 +56,7 @@ h2{
     border-radius:5px;
     background-color: var(--font);
     text-align: center;
+    width: 150px;
 }
 #category{
     text-align: center;
@@ -63,11 +64,16 @@ h2{
     border: none;
     border-radius:5px;
     background-color: var(--font);
-    /* background: none; */
+    width: 154px;
 }
 a{
     text-decoration: none;
     color: var(--font);
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
 }
 
 .btn button{
@@ -84,7 +90,7 @@ a{
     transition: 0.25s;
 }
 .gotodashboard a button{
-    width: 220px;
+    width: 230px;
     border-radius:5px;
     padding: 10px;
     border: none;
@@ -98,4 +104,25 @@ a{
     background-color: var(--hover);
     /* border: 2px solid var(--font); */
     transition: 0.25s;
+}
+
+.form {
+    padding-top: 40px;
+    width: 85%;
+}
+
+.inputs {
+    display: flex;
+    justify-content: space-between;
+}
+
+#radioClass {
+    padding: 2px;
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#credit {
+    margin-left: 10px;
 }

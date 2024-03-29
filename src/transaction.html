@@ -11,29 +11,31 @@
 <body>
     <div class="container">
         <h2>Enter Transaction Details</h2>
-        <form action="#" id="addTransaction">
-            <div class="date">
+        <form action="#" id="addTransaction" class="form">
+            <div class="date inputs">
                 <span>
                     Enter date:
                 </span>
                 <input type="date" id="date" required>
             </div>
 
-            <div class="option">
+            <div class="option inputs">
                 <span>
                     Transaction:
                 </span>
-                <input type="radio" name="transaction" id="debit" value="debit" required>Debit
-                <input type="radio" name="transaction" id="credit" value="credit">Credit
+                <div id="radioClass">
+                    <input type="radio" name="transaction" id="debit" value="debit" required>Debit
+                    <input type="radio" name="transaction" id="credit" value="credit">Credit
+                </div>
             </div>
 
-            <div class="amount">
+            <div class="amount inputs">
                 <span>
                     Amount:
                 </span>
                 <input type="number" max="1000000000000" min="0" id="amount" required>
             </div>
-            <div class="category">
+            <div class="category inputs">
                 <span>
                     Category:
                 </span> 

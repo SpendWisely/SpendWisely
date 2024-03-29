@@ -34,18 +34,3 @@ async function logout() {
   }
 }
 
-// function displayUser() {
-//   const currUser = auth.currentUser;
-//   const currentUser = document.getElementById("currentuser");
-//   currentUser.textContent = currUser.email;
-// }
-
-// onAuthStateChanged(auth, (user) => {
-//   if(user) {
-//     displayUser()
-//   }
-//   else{
-//     const currentUser = document.getElementById("currentuser");
-//     currentUser.textContent = "Not signed in"
-//   }
-// })
