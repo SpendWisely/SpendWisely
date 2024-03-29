@@ -2,20 +2,25 @@
 
 * {
     margin: 0;
+    padding: 0;
     font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 20px;
+    font-size: 15px;
+}
+
+:root {
+    --background: rgba(24, 23, 40, 255);
+    --box: rgba(32, 29, 50, 255);
+    --font: rgba(245, 245, 250, 255);
+    --border: rgba(132, 130, 145, 255);
+    --boxborder: rgba(138, 136, 243, 255);
+    --placeholder: rgba(131, 129, 143, 255);
+    --hover: rgba(85, 84, 148, 255);
 }
 
 body {
     height: 100vh;
-    background-color: rgb(53, 53, 53);
-    color: aliceblue;
-}
-
-img{
-    border: 2px solid black;
+    background-color: var(--background);
+    color: var(--font);
 }
 .menu {
     display: flex;
@@ -24,27 +29,34 @@ img{
     position: relative;
 }
 
-.pie, .expense{
+.pie,
+.expense {
+    font-size: 25px;
+    font-weight: 500;
     text-align: center;
-    text-decoration: underline;
-    padding: 30px;
-    border: 2px solid red;
+    padding: 15px;
     margin-bottom: 20px;
 }
-
-.outerChart{
-    width: 400px;
+.balance{
+    height: 50px;
+    margin: 0px 25px 50px 10px;
+    background-color: var(--box);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
+.outerChart {
+    background-color: var(--box);
+    margin: 0px 25px 50px 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
     height: 400px;
-    border: 1px solid #940a0a
-}
-.chart {
-    width: 90%;
-    height: 90%;
-    /* border: 1px solid #f1f1f1; */
-    overflow: visible;
 }
 
-.txnChart{
+.txnChart {
     overflow: visible;
 }
 
@@ -52,55 +64,70 @@ img{
     width: 50%;
     margin: 10px;
     height: 100%;
-    position: relative;
 }
-
-.table::-webkit-scrollbar{
-    width: 4px;;
+.range{
+    text-align: center;
+    background-color: var(--box);
+    padding: 10px;
+    border-radius: 10px;
+}
+.range input{
+    outline: none;
+    border: none;
+    border-radius:5px;
+    background-color: var(--font);
+    text-align: center;
+}
+.table::-webkit-scrollbar {
+    width: 5px;
 }
 
 .table::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Color of the track */
+    background: rgba(63,62,82,255);
+    /* Color of the track */
 }
 
 .table::-webkit-scrollbar-thumb {
-    background: #888; /* Color of the thumb */
+    background: var(--placeholder);
+    /* Color of the thumb */
     border-radius: 10px;
 }
 
 .table::-webkit-scrollbar-thumb:hover {
-    background: #555; /* Color of the thumb on hover */
+    background: var(--boxborder);
+    /* Color of the thumb on hover */
 }
 
 .display {
-    border-right: 1px solid ghostwhite;
+    border-right: 1px solid var(--placeholder);
 }
 
-.balance {
-    text-align: center;
-    margin-top: 25px;
+.table{
+    border-radius: 20px;
 }
-
 .table th {
-    position: sticky;
-    top: 0px;
-    border-right: 1px solid ghostwhite;
-    border-bottom: 1px solid ghostwhite;
+    /* position: sticky; */
+    /* top: 0px; */
+    /* border-right: 1px solid ghostwhite;
+    border-bottom: 1px solid ghostwhite; */
     width: 200px;
+    /* width: 150px; */
     padding: 25px 0px 25px 0px;
-    background-color:#353535
+    background-color: var(--box);
+    font-size: 15px;
 }
 
-td{
+td {
+    background-color: var(--box);
     padding: 10px 0px 10px 0px;
-    font-size: 15px;
+    font-size: 13px;
+    font-weight: 400;
     text-align: center;
 }
 
 .table {
-    border: 1px solid ghostwhite;
     border-collapse: collapse;
-    height: 75%;
+    height: 74%;
     overflow-y: scroll;
     position: relative;
-  }
+}

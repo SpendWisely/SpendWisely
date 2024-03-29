@@ -148,7 +148,8 @@ async function loadChart() {
     myChart.destroy();
   }
   myChart = new Chart(document.getElementById("txnChart"), {
-    type: "pie",
+    type: "doughnut",
+    // type: "pie",
     data: {
       labels: [
         "Travel",
@@ -176,9 +177,23 @@ async function loadChart() {
             "rgb(87, 205, 86)",
             "rgb(255, 146, 86)",
           ],
-          hoverOffset: 4,
+          hoverOffset: 10,
         },
       ],
     },
+    options: {
+      plugins: {
+        legend: {
+          labels: {
+            font: {
+              size: 15
+            }
+          }
+        }
+      },
+      layout: {
+        padding: 15,
+      }
+    }
   });
 }
