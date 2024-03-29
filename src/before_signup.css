@@ -5,20 +5,21 @@
     font-family: "Poppins", sans-serif;
     font-size: 20px;
 }
+
 :root {
     --background: rgba(24, 23, 40, 255);
     --box: rgba(32, 29, 50, 255);
     --font: rgba(245, 245, 250, 255);
-    --border: rgba(132,130,145,255);
-    --boxborder: rgba(138,136,243,255);
-    --placeholder: rgba(131,129,143,255);
+    --border: rgba(132, 130, 145, 255);
+    --boxborder: rgba(138, 136, 243, 255);
+    --placeholder: rgba(131, 129, 143, 255);
 }
-body{
-    /* background-color: var(--box); */
+
+body {
     background-color: var(--background);
 }
+
 .navbar {
-    /* background-color: var(--box); */
     background-color: var(--background);
     overflow: hidden;
     height: 100px;
@@ -50,7 +51,7 @@ body{
     transition: 0.2s;
 }
 
-.matter{
+.matter {
     color: var(--font);
     width: 60%;
     margin: auto;
@@ -60,11 +61,12 @@ body{
     padding: 50px;
 }
 
-.matter #name{
+.matter #name {
     font-size: 80px;
     color: var(--boxborder);
     font-weight: 700;
 }
-.matter #info{
+
+.matter #info {
     color: var(--font);
 }

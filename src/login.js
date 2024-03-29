@@ -1,4 +1,4 @@
-import {app} from "../firebase";
+import { app } from "../firebase";
 import {
   getAuth,
   signInWithEmailAndPassword,
@@ -29,7 +29,7 @@ async function login(email, password) {
     localStorage.setItem("currentUser", JSON.stringify(userCredential));
 
     window.location.href = "/src/after_signup.html";
-    
+
   } catch (error) {
     console.error("Error logging in: ", error.message);
     throw error;

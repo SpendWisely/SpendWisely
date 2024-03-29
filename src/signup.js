@@ -34,11 +34,11 @@ async function register(email, password) {
       auth,
       email,
       password
-      );
-      console.log("User created: ", userCredential.user);
-      localStorage.setItem("currentUser", JSON.stringify(userCredential));
-    
-      await setDoc(doc(db, "Users", userCredential.user.uid), {
+    );
+    console.log("User created: ", userCredential.user);
+    localStorage.setItem("currentUser", JSON.stringify(userCredential));
+
+    await setDoc(doc(db, "Users", userCredential.user.uid), {
       username: email,
       budget: null,
       balance: 0,
@@ -47,7 +47,7 @@ async function register(email, password) {
     signupSubmit.textContent = "Signup"
     SignUp.reset();
     window.location.href = "/src/after_signup.html";
-    
+
   } catch (error) {
     console.error("Error creating account: ", error.message);
     throw error;
