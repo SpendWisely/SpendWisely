@@ -99,3 +99,7 @@ a{
     /* border: 2px solid var(--font); */
     transition: 0.25s;
 }
+
+input, label{
+    cursor: pointer;
+}
