@@ -32,6 +32,7 @@ section {
     align-items: center;
     border-radius: 20px;
     background-color: var(--box);
+    position: relative;
 }
 h2 {
     font-size: 30px;
@@ -100,4 +101,22 @@ button:hover {
     text-decoration: underline;
     color: var(--boxborder);
     transition: 0.1s;
+}
+
+.demo-acc{
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    position: absolute;
+    border-radius: 50%;
+    right: -50px;
+    top: 50px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.demo-acc:hover {
+    cursor: pointer;
+    scale: 110%;
 }

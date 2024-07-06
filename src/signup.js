@@ -1,5 +1,6 @@
 import { app, db } from "../firebase";
 import { addDoc, collection, doc, setDoc } from "firebase/firestore";
+import {signInWithEmailAndPassword} from "firebase/auth"
 
 import {
   getAuth,
@@ -8,6 +9,13 @@ import {
 
 const auth = getAuth(app);
 console.log(auth);
+
+//attach demoLogin eventlistener
+const demoLogIn = document.getElementById("demo-acc");
+demoLogIn.addEventListener("click", async (e) => {
+  e.preventDefault();
+  const user = demoAccLogin();
+});
 
 const SignUp = document.getElementById("signup");
 let signupSubmit = document.getElementById("signupSubmit");
@@ -50,6 +58,25 @@ async function register(email, password) {
     
   } catch (error) {
     console.error("Error creating account: ", error.message);
+    throw error;
+  }
+}
+
+//Handle demo login
+async function demoAccLogin(){
+  try {
+    const userCredential = await signInWithEmailAndPassword(
+      auth,
+      "demoaccount@demo.com",
+      "demodemo"
+    );
+    console.log("User logged in: ", userCredential.user);
+    localStorage.setItem("currentUser", JSON.stringify(userCredential));
+
+    window.location.href = "/src/after_signup.html";
+
+  } catch (error) {
+    console.error("Error logging in: ", error.message);
     throw error;
   }
 }
