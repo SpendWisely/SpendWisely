@@ -2,12 +2,12 @@ import {
   getAuth,
   signOut,
 } from "firebase/auth";
-import {app} from "../firebase";
+import { app } from "../firebase";
 
 // Initialize Firebase
 const auth = getAuth(app);
 console.log(auth);
-console.log("currUser",auth.currentUser);
+console.log("currUser", auth.currentUser);
 
 
 const LogOut = document.getElementById("logout");

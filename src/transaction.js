@@ -62,9 +62,9 @@ Txn.addEventListener("submit", async (e) => {
   Txn.reset();
 });
 
-function checkDebitIncome(txnType, category){
+function checkDebitIncome(txnType, category) {
   console.log(txnType, category)
-  if(txnType == false && category == "income"){
+  if (txnType == false && category == "income") {
     window.alert("Cannot debit income");
     return false;
   }
